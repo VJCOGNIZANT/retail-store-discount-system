@@ -11,12 +11,12 @@ To calculate discount on items
 6. A user can get only one of the percentage based discounts on a bill.
 
 ##  Build Process
-* Get the clone of the code from the url ="https://github.com/VJCOGNIZANT/RetailStoreDiscountSystem".
+* Get the clone of the code from the url ="https://github.com/VJCOGNIZANT/retail-store-discount-system".
 * Open Command Promt from your system and go to the project resource.
 * Use "mvn clean install -U" cammand to build your application.
 
 ## Test
-* DiscountCalculatorImplTest class covers all the possible scenerios.
+* DiscountSystemDaoImplTest and DiscountSystemServiceImplTest class covers all the possible scenerios.
 
 ## COde Coverage
 * Install eclema to your IDE.
