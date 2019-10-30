@@ -57,9 +57,9 @@ public final class DiscountUtil {
 	 * @throws CheckPriceException
 	 */
 	public static double getDiscOnPrice(double price) {
-		double discount=0;
+		double dis=0;
 		if (price > 0) {
-			discount= ((int) (price / restrict)) * discount;
+			dis= ((int) (price / restrict)) * discount;
 		}
 		else {
 			try {
@@ -68,7 +68,7 @@ public final class DiscountUtil {
 				e.printStackTrace();
 			}
 		}
-		return discount;
+		return dis;
 	}
 /**
  * getDiscount method get discount
@@ -76,15 +76,15 @@ public final class DiscountUtil {
  * @return discount as double type
  */
 	public static double getDiscount(User user) {
-		double discount = 0;
+		double dis = 0;
 		if (user.isEmployee()) {
-			discount = discountForEmployee;
+			dis = discountForEmployee;
 		} else if (user.isAffiliated()) {
-			discount = discountForAffiliated;
+			dis = discountForAffiliated;
 		} else if (DiscountUtil.getYearDifference(user) >= timeThresold) {
-			discount = discountForOldCustomer;
+			dis = discountForOldCustomer;
 		}
-		return discount;
+		return dis;
 
 	}
 }
