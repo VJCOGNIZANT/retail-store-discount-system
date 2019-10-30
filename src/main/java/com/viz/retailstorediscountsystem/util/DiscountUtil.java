@@ -14,18 +14,18 @@ import com.viz.retailstorediscountsystem.model.User;
  */
 public final class DiscountUtil {
 
-	@Value("${com.viz.discount.RESTRICT}")
-	private static double RESTRICT;
-	@Value("${com.viz.discount.DISC}")
-	private static double DISC;
-	@Value("${com.viz.discount.DISC_EMP}")
-	private static double DISC_EMP;
-	@Value("${com.viz.discount.DISC_AFF}")
-	private static double DISC_AFF;
-	@Value("${com.viz.discount.DISC_OLD}")
-	private static double DISC_OLD;
-	@Value("${com.viz.discount.TIME_THRESOLD}")
-	private static int TIME_THRESOLD;
+	@Value("${com.viz.discount.restrict}")
+	private static double restrict;
+	@Value("${com.viz.discount.discount}")
+	private static double discount;
+	@Value("${com.viz.discount.discountForEmployee}")
+	private static double discountForEmployee;
+	@Value("${com.viz.discount.discountForAffiliated}")
+	private static double discountForAffiliated;
+	@Value("${com.viz.discount.discountForOldCustomer}")
+	private static double discountForOldCustomer;
+	@Value("${com.viz.discount.timeThresold}")
+	private static int timeThresold;
 
 	public DiscountUtil() {
 
@@ -63,7 +63,7 @@ public final class DiscountUtil {
 	public static double getDiscOnPrice(double price) {
 		double discount=0;
 		if (price > 0) {
-			discount= ((int) (price / RESTRICT)) * DISC;
+			discount= ((int) (price / restrict)) * discount;
 		}
 		else {
 			try {
@@ -78,11 +78,11 @@ public final class DiscountUtil {
 	public static double getDiscount(User user) {
 		double discount = 0;
 		if (user.isEmployee()) {
-			discount = DISC_EMP;
+			discount = discountForEmployee;
 		} else if (user.isAffiliated()) {
-			discount = DISC_AFF;
-		} else if (DiscountUtil.getYearDifference(user) >= TIME_THRESOLD) {
-			discount = DISC_OLD;
+			discount = discountForAffiliated;
+		} else if (DiscountUtil.getYearDifference(user) >= timeThresold) {
+			discount = discountForOldCustomer;
 		}
 		return discount;
 

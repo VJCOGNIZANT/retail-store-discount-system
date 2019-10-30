@@ -21,12 +21,12 @@ public class DiscountSystemDaoImplTest {
 		dao=new DiscountSystemDaoImpl();
 		DiscountUtil obj=new DiscountUtil();
 		MockitoAnnotations.initMocks(DiscountUtil.class);
-		ReflectionTestUtils.setField(obj,"RESTRICT",100);
-		ReflectionTestUtils.setField(obj,"DISC",5);
-		ReflectionTestUtils.setField(obj,"DISC_EMP",0.3);
-		ReflectionTestUtils.setField(obj,"DISC_AFF",0.1);
-		ReflectionTestUtils.setField(obj,"DISC_OLD",0.05);
-		ReflectionTestUtils.setField(obj,"TIME_THRESOLD",2);
+		ReflectionTestUtils.setField(obj,"restrict",100);
+		ReflectionTestUtils.setField(obj,"discount",5);
+		ReflectionTestUtils.setField(obj,"discountForEmployee",0.3);
+		ReflectionTestUtils.setField(obj,"discountForAffiliated",0.1);
+		ReflectionTestUtils.setField(obj,"discountForOldCustomer",0.05);
+		ReflectionTestUtils.setField(obj,"timeThresold",2);
 	}
 	
 	@Test
