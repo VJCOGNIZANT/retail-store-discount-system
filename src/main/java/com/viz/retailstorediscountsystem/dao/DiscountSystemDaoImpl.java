@@ -9,15 +9,14 @@ import com.viz.retailstorediscountsystem.util.DiscountUtil;
  */
 public class DiscountSystemDaoImpl implements DiscountSystemDao {
 
-	private double discAmt;
-
 	public double calculateDiscountForGroceries(User user, ProductDetails prd) {
 		double dicount = 0;
+		double discAmt = 0;
 		discAmt = DiscountUtil.getDiscOnPrice(prd.getPrice());
 		if (!prd.isGrocery()) {
 			dicount = DiscountUtil.getDiscount(user);
 		}
-		return discAmt = discAmt + calculateDiscPrice(prd.getPrice(), dicount);
+		return discAmt + calculateDiscPrice(prd.getPrice(), dicount);
 	}
 
 	/**

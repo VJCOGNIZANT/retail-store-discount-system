@@ -11,25 +11,6 @@ public class ProductDetails {
 	private boolean isGrocery;
 	private double price;
 
-	public ProductDetails() {
-
-	}
-
-	/**
-	 * ProductDetails class constructor
-	 * 
-	 * @param prdId     as int
-	 * @param name      as String
-	 * @param isGrocery as boolean
-	 * @param price     as int
-	 */
-	public ProductDetails(int prdId, String name, boolean isGrocery, int price) {
-		this.prdId = prdId;
-		this.name = name;
-		this.isGrocery = isGrocery;
-		this.price = price;
-	}
-
 	public int getPrdId() {
 		return prdId;
 	}

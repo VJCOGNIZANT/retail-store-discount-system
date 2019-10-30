@@ -27,10 +27,6 @@ public final class DiscountUtil {
 	@Value("${com.viz.discount.timeThresold}")
 	private static int timeThresold;
 
-	public DiscountUtil() {
-
-	}
-
 	/**
 	 * Gets the year difference.
 	 *
@@ -74,7 +70,11 @@ public final class DiscountUtil {
 		}
 		return discount;
 	}
-
+/**
+ * getDiscount method get discount
+ * @param user as User Object
+ * @return discount as double type
+ */
 	public static double getDiscount(User user) {
 		double discount = 0;
 		if (user.isEmployee()) {
