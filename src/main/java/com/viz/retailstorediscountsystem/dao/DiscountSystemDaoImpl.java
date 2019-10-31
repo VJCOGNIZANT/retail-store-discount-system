@@ -22,8 +22,8 @@ public class DiscountSystemDaoImpl implements DiscountSystemDao {
 	/**
 	 * Calculate disc price.
 	 *
-	 * @param i       the user
-	 * @param dicount the price
+	 * @param price accepts double
+	 * @param dicount accepts double
 	 * @return the double
 	 */
 	private static double calculateDiscPrice(double price, double dicount) {
