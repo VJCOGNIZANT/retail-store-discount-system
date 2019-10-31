@@ -1,13 +1,16 @@
 package com.viz.retailstorediscountsystem.model;
 
+import java.io.Serializable;
+
 /**
  * This is User class a model for Users
  * 
  * @author Vijendra-Singh
  *
  */
-public class User {
+public class User implements Serializable{
 
+	private static final long serialVersionUID = 2725633837014331956L;
 	private int id;
 	private String name;
 	private String doa;

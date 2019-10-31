@@ -1,11 +1,15 @@
 package com.viz.retailstorediscountsystem.model;
 
+import java.io.Serializable;
+
 /**
  * This is ProductDetails class a model for products
  *
  */
-public class ProductDetails {
+public class ProductDetails implements Serializable{
 
+	private static final long serialVersionUID = -7825166897330076052L;
+	
 	private int prdId;
 	private String name;
 	private boolean isGrocery;
