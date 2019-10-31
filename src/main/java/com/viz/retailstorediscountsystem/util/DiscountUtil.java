@@ -30,7 +30,7 @@ public final class DiscountUtil {
 	/**
 	 * Gets the year difference.
 	 *
-	 * @param user the user
+	 * @param user accepts User
 	 * @return the year difference
 	 */
 
@@ -52,16 +52,15 @@ public final class DiscountUtil {
 	/**
 	 * Gets the disc on price.
 	 *
-	 * @param price the price
-	 * @return the disc on price
+	 * @param price accepts double
+	 * @return the discount on price
 	 * @throws CheckPriceException
 	 */
 	public static double getDiscOnPrice(double price) {
-		double dis=0;
+		double dis = 0;
 		if (price > 0) {
-			dis= ((int) (price / restrict)) * discount;
-		}
-		else {
+			dis = ((int) (price / restrict)) * discount;
+		} else {
 			try {
 				throw new CheckPriceException("Price should be more than 0");
 			} catch (CheckPriceException e) {
@@ -70,11 +69,13 @@ public final class DiscountUtil {
 		}
 		return dis;
 	}
-/**
- * getDiscount method get discount
- * @param user as User Object
- * @return discount as double type
- */
+
+	/**
+	 * getDiscount method get discount
+	 * 
+	 * @param user accepts User
+	 * @return discount returns discount
+	 */
 	public static double getDiscount(User user) {
 		double dis = 0;
 		if (user.isEmployee()) {

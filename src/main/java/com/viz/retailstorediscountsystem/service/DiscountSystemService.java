@@ -14,8 +14,8 @@ public interface DiscountSystemService {
 	/**
 	 * Calculate discount for groceries.
 	 *
-	 * @param user the user
-	 * @param prd the prd
+	 * @param user accepts User
+	 * @param prd accepts ProductDetails
 	 * @return the double
 	 */
 	double calculateDiscountForGroceries(User user,ProductDetails prd);
